@@ -1,155 +1,104 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>Ishika Bhatt - Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishika Bhatt | Portfolio</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: #0b1020;
+            background-color: #10172d;
             color: white;
-            line-height: 1.6;
         }
 
         header {
-            background: #121a2e;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h2 {
-            color: #8b9cff;
+            background-color: #1c2745;
+            padding: 20px;
+            text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin: 15px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #8b9cff;
+            color: #a5b4fc;
         }
 
         .home {
-            min-height: 85vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 80px 20px;
         }
 
         .home h1 {
-            font-size: 45px;
-            margin-bottom: 15px;
+            font-size: 40px;
         }
 
         .home span {
-            color: #8b9cff;
+            color: #a5b4fc;
         }
 
         .home p {
-            color: #aab5ce;
             font-size: 18px;
-            margin-bottom: 25px;
         }
 
         .btn {
             display: inline-block;
-            background: #8b9cff;
-            color: #10172d;
+            background-color: #818cf8;
+            color: black;
             padding: 12px 25px;
-            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 15px;
         }
 
         section {
-            padding: 60px 10%;
+            padding: 40px 10%;
         }
 
         h2 {
-            color: #8b9cff;
-            margin-bottom: 20px;
+            color: #a5b4fc;
             text-align: center;
         }
 
-        .about, .skill, .project, .contact {
-            background: #121a2e;
+        .box {
+            background-color: #1c2745;
             padding: 25px;
             margin: 15px 0;
-            border-radius: 12px;
-            border: 1px solid #273451;
-        }
-
-        .about p, .project p, .contact p {
-            color: #aab5ce;
+            border-radius: 10px;
         }
 
         .skills {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
         }
 
-        .skill {
-            text-align: center;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .project a {
-            display: inline-block;
-            margin-top: 12px;
-            color: #8b9cff;
-            text-decoration: none;
-        }
-
-        .contact {
+        .skills div {
+            background-color: #1c2745;
+            padding: 20px;
+            border-radius: 8px;
+            min-width: 100px;
             text-align: center;
         }
 
         footer {
-            background: #121a2e;
+            background-color: #1c2745;
             text-align: center;
             padding: 20px;
-            color: #aab5ce;
         }
 
-        @media (max-width: 650px) {
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
+        @media(max-width: 600px) {
             nav a {
-                margin: 5px;
-                font-size: 14px;
-            }
-
-            .home h1 {
-                font-size: 32px;
-            }
-
-            .skills, .projects {
-                grid-template-columns: 1fr;
+                display: inline-block;
+                margin: 7px;
             }
         }
     </style>
@@ -157,135 +106,112 @@
 
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <h2>IB Portfolio</h2>
+<!-- HEADER -->
+<header>
+    <h1>Ishika Bhatt</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<!-- HOME -->
+<section class="home" id="home">
+    <h1>Hello, I'm <span>Ishika Bhatt</span></h1>
+    <h3>BCA Student | Aspiring Web Developer</h3>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div>
-            <h1>Hi, I'm <span>Ishika Bhatt</span></h1>
+    <p>
+        Welcome to my personal portfolio website.
+        I love learning technology and creating websites.
+    </p>
 
-            <p>
-                BCA Student | Aspiring Web Developer
-                <br>
-                Learning, Creating and Growing.
-            </p>
+    <a href="#about" class="btn">Know More</a>
+</section>
 
-            <a href="#projects" class="btn">
-                View My Projects
-            </a>
-        </div>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-
-        <div class="about">
-            <p>
-                Hello! I am Ishika Bhatt, a BCA student
-                interested in web development and programming.
-
-                I enjoy learning new technologies and creating
-                simple and creative websites. I am improving
-                my technical skills through practical projects.
-            </p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill">
-                <h3>HTML</h3>
-                <p>Webpage Structure</p>
-            </div>
-
-            <div class="skill">
-                <h3>CSS</h3>
-                <p>Webpage Designing</p>
-            </div>
-
-            <div class="skill">
-                <h3>GitHub</h3>
-                <p>Project Management</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="projects">
-
-            <div class="project">
-                <h3>My First Webpage</h3>
-
-                <p>
-                    My beginner HTML webpage project.
-                </p>
-
-                <a href="https://github.com/bhattishika2307-stack/My--first--webpage"
-                   target="_blank">
-                    View Project
-                </a>
-            </div>
-
-            <div class="project">
-                <h3>My First Website</h3>
-
-                <p>
-                    A simple website created using HTML.
-                </p>
-
-                <a href="https://github.com/bhattishika2307-stack/My---first---Webpage"
-                   target="_blank">
-                    View Project
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <div class="contact">
-            <p>
-                Thank you for visiting my portfolio!
-            </p>
-
-            <br>
-
-            <a href="https://github.com/bhattishika2307-stack"
-               target="_blank" class="btn">
-                Visit My GitHub
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+    <div class="box">
         <p>
-            © 2026 Ishika Bhatt | Personal Portfolio
+            I am a BCA student interested in web development,
+            programming and technology. I enjoy learning new
+            skills and creating creative projects.
+            My goal is to become a successful IT professional.
         </p>
-    </footer>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>My Education</h2>
+
+    <div class="box">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>Currently Pursuing - Semester 3</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>C</div>
+        <div>C++</div>
+        <div>GitHub</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="box">
+        <h3>My First Website</h3>
+        <p>A beginner website created using HTML.</p>
+        <a href="https://github.com/bhattishika2307-stack/My---first---Webpage"
+           target="_blank">View Project</a>
+    </div>
+
+    <div class="box">
+        <h3>My First Webpage</h3>
+        <p>A creative webpage development project.</p>
+        <a href="https://github.com/bhattishika2307-stack/My--first--webpage"
+           target="_blank">View Project</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="box">
+        <p><b>Name:</b> Ishika Bhatt</p>
+        <p><b>GitHub:</b>
+            <a href="https://github.com/bhattishika2307-stack"
+               target="_blank">Visit GitHub</a>
+        </p>
+        <p><b>LinkedIn:</b>
+            <a href="https://www.linkedin.com/"
+               target="_blank">Visit LinkedIn</a>
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Ishika Bhatt | My Personal Portfolio</p>
+    <p>Designed using HTML and CSS</p>
+</footer>
 
 </body>
 </html>
+
